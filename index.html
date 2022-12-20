@@ -1,149 +1,624 @@
-<!DOCTYPE html
-    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="color-scheme" content="light dark">
-    <meta name="supported-color-schemes" content="light dark">
-    <title>HTML Email Template Boilerplate</title>
+    <!-- For clients that strip head tag -->
+</head>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="x-apple-disable-message-reformatting">
+    <!--[if !mso]><!-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--<![endif]-->
+    <title>Shipping confirmation</title>
+    <!--[if mso]>
     <style type="text/css">
-        @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500&family=Montserrat&family=NTR&family=Raleway:wght@400;700&family=Roboto:wght@300&family=Signika:wght@500&family=Source+Sans+Pro:wght@600&display=swap');
+        table {border-collapse:collapse;border:0;border-spacing:0;margin:0;}
+        div, td {padding:0;}
+        div {margin:0 !important;}
+    </style>
+    <noscript>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    </noscript>
+    <![endif]-->
+    <style type="text/css">
+        @import url(https://front.filtereasy.com/font/rising-sun-email.css);
         * {
             box-sizing: border-box;
         }
-
         body {
             margin: 0;
-        }
-
-        table {
-            border-spacing: 0;
-        }
-
-        td {
-            padding: 0;
-
-        }
-
-        p {
-            font-size: 16px;
         }
 
         img {
             border: 0;
         }
 
-        a {
-            text-decoration: none;
-        }
-
-
-
-        @media screen and (max-width: 599.98px) {}
-
-        @media screen and (max-width: 399.98px) {}
-
-        /* Custom Dark Mode Colors */
-        :root {
-            color-scheme: light dark;
-            supported-color-schemes: light dark;
-        }
-
-        @media (prefers-color-scheme: dark) {
-
-            body,
-            center,
-            table,
-            .darkmode-bg {
-                background: #2d2d2d !important;
-                color: #ffffff !important;
+         /* Removes Samsung blue links */
+         #MessageViewBody a {
+    		color: inherit;
+    		text-decoration: none;
+    		font-size: inherit;
+    		font-family: inherit;
+    		font-weight: inherit;
+    		line-height: inherit;
+				}
+        
+        @media screen and (max-width: 599.98px) { 
+            .logo-col,.social-col {
+                text-align: center!important;
             }
-
-            .darkmode-transparent {
-                background-color: transparent !important;
+            .two-col-ship{
+                text-align: center!important;
             }
-        }
+            .column-1-ship,.column-2-ship {
+                display: block!important;
+                max-width: none!important;
+            }
+            .ship-text {
+                color: #030408!important;
+                text-decoration: none!important;
+            }
+            .content-ship {
+                max-width: 226px!important;
+            }
+            .main-content {
+                text-align: center!important;
+            }
+            .two-col-order {
+                text-align: center!important;
+            }
+            .air-filter-img {
+                display: none!important;
+            }
+            .two-col-product {
+                text-align: center!important;
+            }
+            .product-details {
+                text-align: center!important;
+            }
+		}     
     </style>
-
-    <!--[if (gte mso 9)|(IE)]>
-		<style type="text/css">
-			table {border-collapse: collapse !important;}
-		</style>
-	<![endif]-->
-
 </head>
-
-<body style="Margin:0;padding:0;min-width:100%;background-color:#c9c9c9;">
-
-    <!--[if (gte mso 9)|(IE)]>
-      <style type="text/css">
-         body {background-color: #c9c9c9!important;}
-         body, table, td, p, a {font-family: sans-serif, Arial, Helvetica!important;}
-      </style>
-   <![endif]-->
-
-    <center style="width: 100%;table-layout:fixed;background-color: #c9c9c9;padding-bottom: 40px;">
-        <div style="max-width: 600px;background-color: #e1e1e3;box-shadow: 0 0 10px rgba(0, 0, 0, .2);">
-
-            <!-- Preheader (remove comment) -->
-            <div
-                style="font-size: 0px;color: #e1e1e3;line-height: 1px;mso-line-height-rule:exactly;display: none;max-width: 0px;max-height: 0px;opacity: 0;overflow: hidden;mso-hide:all;">
-                <!-- Add Preheader Text Here (85-100 characters in length) -->
-            </div>
-            <!-- End Preheader (remove comment) -->
-
-            <!--[if (gte mso 9)|(IE)]>
-            <table width="600" align="center" style="border-spacing:0;color:#565656;" role="presentation">
-            <tr>
-            <td style="padding:0;">
-         <![endif]-->
-
-            <table class="email-body-outer-bg" align="center"
-                style="border-spacing:0;color:#565656;font-family: 'Lato',sans-serif, Arial, Helvetica;background-color: #e1e1e3;Margin:0;padding:0;width: 100%;max-width: 600px;"
-                role="presentation">
-
-                <!-- START-HEADER -->
-                <tr>
-                    <td>
-                        <table class="section-container" role="presentation" width="100%" cellpadding="0"
-                            cellspacing="0" border="0">
-                            <tr>
-                                <td>
-                                    <h1 style="font-size: 22px;font-weight: 600;color: #283064;font-family: 'Source Sans Pro', sans-serif;">FilterEasy</h1>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-                <!-- END-HEADER -->
-
-                <!-- START-MAIN-CONTENT -->
-                <table class="email-body-inner-bg" align="center"
-                    style="border-spacing:0;background-color: #ffffff;Margin:0;padding:0;width: 100%;max-width: 520px;"
-                    role="presentation">
-
-                </table>
-                <!-- END-MAIN-CONTENT -->
-
-                <!-- START-FOOTER -->
-
-                <!-- END-FOOTER -->
-
-
-            </table>
-
-            <!--[if (gte mso 9)|(IE)]>
-         </td>
-         </tr>
-         </table>
-         <![endif]-->
-
+<body style="margin:0;padding:0;word-spacing:normal;background-color:#f7f7f7;">
+        <div style="display: none; max-height: 0px; overflow: hidden;">
+            Your Order has Shipped! It's that time again! Your next fresh filter shipment is on the way.
         </div>
-    </center>
-
+        <!-- Insert &#847;&zwnj;&nbsp; hack after hidden preview text -->
+        <div style="display: none; max-height: 0px; overflow: hidden;">
+        &#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;
+        &#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;
+        &#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;
+        &#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;
+        &#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;
+        &#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;
+        </div>
+    <!-- Start Wrapper Div -->
+    <div role="article" aria-roledescription="email" lang="en"
+        style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;background-color:#f7f7f7;">
+        <!-- Start Main Table...helps center the body -->
+        <table role="presentation" align="center" width="100%" cellpadding="0" cellspacing="0" border="0" border-spacing="0">
+            <tr>
+                <td align="center">
+                    <!-- Start Main Ghost Table-->
+                    <!--[if mso]>
+                        <table role="presentation" align="center" style="width:600px;" cellpadding="0"
+                        cellspacing="0" border="0" border-spacing="0">
+                        <tr>
+                        <td style="padding:20px 0;">
+                        <![endif]-->
+                    <!-- Start Main Div...96%...creates natural padding for mobile -->
+                    <div class="outer" style="width:96%;max-width:600px;margin:20px auto;">
+                        <!-- Start Header -->
+                        <div class="two-col-head" style="font-size:0;max-width: 530px;">
+                            <!--[if mso]>
+                            <table role="presentation" style="530px" align="center" cellpadding="0"
+                            cellspacing="0" border="0" border-spacing="0">
+                            <tr>
+                            <td style="width:265px;text-align:left;" valign="middle">
+                            <![endif]-->
+                            <div class="logo-col"
+                                style="width:100%;max-width:265px;display:inline-block;vertical-align:middle;">
+                                <!-- logo and social columns have uneven widths in order to establish stacking right below 600px (598px to be exact) -->
+                                <div>
+                                    <a href="https://www.secondnature.com/press-release/leading-home-air-filter-service-company-filtereasy-announces-rebrand-as-second-nature" target="_blank">
+                                        <!-- Company had a rebranding in 2019 hence the FilterEasy website no longer existing. New name is Second Nature. -->
+                                        <img src="https://front.filtereasy.com/emails/fe2_logo_emails.png" alt="FilterEasy" style="background-color: #f7f7f7;font-size: 30px;line-height: 1.4;color:#003A70 ;"
+                                            width="150">
+                                    </a>
+                                </div>
+                            </div>
+                            <!--[if mso]>
+                                </td>
+                                <td style="width:265px;text-align:right;" valign="middle">
+                            <![endif]-->
+                            <div class="social-col"
+                                style="width:100%;max-width:265px;display:inline-block;vertical-align:middle;">
+                                <div style="padding-top: 5px;">
+                                    <!--[if mso]>
+                                        </td>
+                                        <td style="padding-right: 10px;">
+                                    <![endif]-->
+                                    <a href="https://www.facebook.com/SecondNatureNow" target="_blank" style="padding-right: 10px;"><img
+                                            src="https://i.postimg.cc/Y97B0x2D/fe2-social-email-facebook.png"
+                                            alt="Facebook" width="32"></a>
+                                     <!--[if mso]>
+                                        </td>
+                                        <td style="padding-right: 10px;">
+                                    <![endif]-->
+                                    <a href="https://www.twitter.com/SecondNatureNow" target="_blank" style="padding-right: 10px;"><img
+                                            src="https://i.postimg.cc/1tKhqNfm/fe2-social-email-twitter.png"
+                                            alt="Twitter" width="32"></a>
+                                     <!--[if mso]>
+                                        </td>
+                                        <td style="padding-right: 10px;">
+                                    <![endif]-->
+                                    <a href="https://www.instagram.com/SecondNatureNow" target="_blank" style="padding-right: 10px;"><img
+                                            src="https://i.postimg.cc/RhPkP572/fe2-social-email-instagram.png"
+                                            alt="Instagram" width="32"></a>
+                                    <!--[if mso]>
+                                        </td>
+                                        <td style="padding-right: 10px;">
+                                    <![endif]-->
+                                    <a href="https://www.linkedin.com/company/secondnaturenow" target="_blank"><img
+                                            src="https://i.postimg.cc/qvtT5RZw/fe2-social-email-linkedin.png"
+                                            alt=" Linkedin" width="32"></a>
+                                </div>
+                            </div>
+                            <!--[if mso]>
+                            </td>
+                            </tr>
+                            </table>
+                            <![endif]-->
+                        </div>
+                        <!-- End Header -->
+                        <!-- Start Inner Container -->
+                        <tr>
+                        <td>
+                        <table class="container" role="presentation" width="100%" align="center" cellpadding="0"
+                        cellspacing="0" border="0" border-spacing="0" style="max-width: 600px;">
+                            <tr>
+                            <td class="main-content" style="background-color: #ffffff;padding: 35px 35px 50px 35px;">
+                                <!-- Start Shipped -->
+                                <table role="presentation"  width="100%" cellpadding="0" cellspacing="0" border="0"
+                                    border-spacing="0">
+                                    <tr>
+                                        <td>
+                                            <h1
+                                                style="margin-top:0px;font-size: 28px;font-weight: 600;color: #030408;font-family: 'Rising Sun', sans-serif;line-height: 1.0;">
+                                                Your Air Filters Have Shipped!</h1>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p
+                                                style="margin:16px 0px;font-size: 16px;font-weight: 500;color: #030408;font-family: 'Rising Sun', sans-serif;line-height: 1.5;">
+                                                It's that time again! Your next fresh filter shipment is on the way.
+                                                Your package will arrive in the next 2-10 business days, depending on
+                                                your location.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p
+                                                style="margin:16px 0px;font-size: 16px;font-weight: 500;color: #030408;font-family: 'Rising Sun', sans-serif;line-height: 1.5;">
+                                                Click the order number to track your filters:&nbsp;&nbsp;&nbsp;&nbsp;<a
+                                                    href="https://www.secondnature.com/press-release/leading-home-air-filter-service-company-filtereasy-announces-rebrand-as-second-nature" target="_blank"
+                                                    style="color: #fc7431;font-weight: 600;text-decoration: underline;">RGE65000500650</a>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!-- End Shipped -->
+                                <!-- Start Order Details -->
+                                <div class="two-col-order" style="text-align:left;font-size:0;padding: 20px 0px 10px 0px;">
+                                    <!--[if mso]>
+                                        <table role="presentation" style="100%" cellpadding="0"
+                                        cellspacing="0" border="0" border-spacing="0">
+                                        <tr>
+                                        <td style="width:265px;"  valign="middle">
+                                        <![endif]-->
+                                    <div class="column-1"
+                                        style="width:100%;max-width:265px;display:inline-block;vertical-align:middle;">
+                                        <div>
+                                            <h2
+                                                style="margin:0;font-size: 28px;font-weight: 600;color: #030408;font-family: 'Rising Sun', sans-serif;line-height: 1.0;">
+                                                Order Details</h2>
+                                        </div>
+                                    </div>
+                                    <!--[if mso]>
+                                        </td>
+                                        <td style="width:265px;" valign="middle">
+                                        <![endif]-->
+                                    <div class="column-2"
+                                        style="width:100%;max-width:265px;display:inline-block;vertical-align:middle;">
+                                        <div>
+                                            <a href="https://my.secondnature.com/account/" target="_blank">
+                                                <p
+                                                    style="font-size: 13px;font-weight: 500;color: #70787C;font-family: 'Rising Sun', sans-serif;line-height: 1.0;text-decoration: underline;">
+                                                    Edit My Subscription</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!--[if mso]>
+                                        </td>
+                                        </tr>
+                                        </table>
+                                        <![endif]-->
+                                </div>
+                                <!-- End Order Details -->
+                                <!-- Start Shipping/Payment -->
+                                <div class="two-col-ship" style="font-size:0;padding-top: 10px;border: none;">        
+                                    <!--[if mso]>
+                                        <table role="presentation" width="100%" cellpadding="0"
+                                        cellspacing="0" border="0" border-spacing="0">
+                                        <tr>
+                                        <td width="226" valign="top" style="padding: 10px 0px 45px 0px;">
+                                        <![endif]-->
+                                    <div class="column-1-ship"
+                                        style="width:100%;display:inline-block;max-width:226px;">
+                                        <div class="content-ship" style="padding: 15px;display:inline-block;vertical-align:top;border: 2px solid #f0f0f0;">
+                                            <p
+                                                style="margin:0;font-size: 16px;font-weight: bold;color: #2D799C;font-family: 'Rising Sun', sans-serif;line-height: 1.5;">
+                                                Shipping Address</p>
+                                            <p
+                                                class="ship-text" style="margin:0;font-size: 16px;font-weight: 500;color: #030408;font-family: 'Rising Sun', sans-serif;line-height: 1.5;">
+                                                600 Montgomery St <br>San Francisco, CA 94111</p>
+                                        </div>
+                                    </div>
+                                    <!--[if mso]>
+                                        </td>
+                                        <td width="50" height="30">
+                                        <![endif]-->
+                                    <div class="column-spacer"
+                                        style="width:100%;display:inline-block;max-width:50px;max-height: 30px;">
+                                        <div>
+                                            <i class="spacer" style="letter-spacing:50px;mso-font-width:-100%;display:inline-block;width:50px;
+                                                    font-size:0px;mso-text-raise:30px;height:30px;">&#8202;</i>
+                                        </div>
+                                    </div>
+                                    <!--[if mso]>
+                                        </td>
+                                        <td width="226" valign="top">
+                                        <![endif]-->
+                                    <div class="column-2-ship"
+                                        style="width:100%;display:inline-block;max-width:226px;">
+                                        <div class="content-ship" style="padding: 15px;display:inline-block;vertical-align:top;border: 2px solid #f0f0f0;">
+                                            <p
+                                                style="margin:0;font-size: 16px;font-weight: bold;color: #2D799C;font-family: 'Rising Sun', sans-serif;line-height: 1.5;">
+                                                Payment Method</p>
+                                            <p
+                                                style="margin:0;font-size: 16px;font-weight: 500;color: #919599;font-family: 'Rising Sun', sans-serif;line-height: 1.5;">
+                                                Visa ending in 6505</p>
+                                        </div>
+                                    </div>
+                                    <!--[if mso]>
+                                        </td>
+                                        </tr>
+                                        </table>
+                                        <![endif]-->
+                                </div>
+                                <!-- End Shipping/Payment -->
+                                <!-- Start Product Details -->
+                                <div class="two-col-product" style="text-align:left;font-size:0;padding-top: 50px;direction: rtl;">
+                                    <!--[if mso]>
+                                    <table align="left" role="presentation" width="460" cellpadding="0" cellspacing="0" border="0" border-spacing="0" dir="rtl">
+                                    <tr>
+                                    <td style="width:300px;"  valign="top">
+                                    <![endif]-->
+                                    <div class="product-details" style="width:100%;max-width:300px;display:inline-block;vertical-align:top;direction: ltr;text-align: left;">
+                                        <!--[if mso]>
+                                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" border-spacing="0">
+                                        <tr>
+                                        <td style="width:100px;padding:0;"  valign="top">
+                                        <![endif]-->
+                                        <div width="100" style="max-width: 100px;display: inline-block;font-weight: 600;color: #030408;font-family: 'Rising Sun', sans-serif;line-height: 1.0;text-align: left;">
+                                            <p style="margin:0;font-size: 14px">
+                                                Size:
+                                            </p>
+                                            <p style="font-size: 14px">
+                                                Quality:
+                                            </p>
+                                            <p style="margin-bottom: 0;font-size: 14px">
+                                                Schedule:
+                                            </p>
+                                        </div>
+                                        <!--[if mso]>
+                                        </td>
+                                        <td style="width:40px;padding:0;" valign="top" dir="ltr">
+                                        <![endif]-->
+                                        <div width="40" style="max-width: 40px;display: inline-block;">
+                                            <i style="letter-spacing:40px;mso-font-width:-100%;display:inline-block;width:40px;
+                                            font-size:0px;mso-text-raise:25px;height:25px;">&#8202;</i>
+                                        </div>
+                                        <!--[if mso]>
+                                        </td>
+                                        <td style="width:150px;padding:0;" valign="top" dir="ltr">
+                                        <![endif]-->
+                                        <div width="150" style="max-width: 150px;display: inline-block;font-weight: 500;color: #030408;font-family: 'Rising Sun', sans-serif;line-height: 1.0;text-align: left;">
+                                            <p
+                                                style="Margin:0;font-size: 14px;">
+                                                14 x 20 x 1 (Qty: 2)
+                                            </p>
+                                            <p style="font-size: 14px">
+                                                SuperAllergen
+                                            </p>
+                                            <p
+                                                style="Margin-bottom:0;font-size: 14px">
+                                                Every 3 months
+                                            </p>
+                                        </div>
+                                        <!--[if mso]>
+                                        </td>
+                                        </tr>
+                                        </table>
+                                        <![endif]-->
+                                    </div>
+                                    <!--[if mso]>
+                                    </td>
+                                    <td style="width:160px;" valign="top">
+                                    <![endif]-->
+                                    <div class="air-filter-img"
+                                        style="width:100%;max-width:160px;display:inline-block;vertical-align:top;direction: ltr;">
+                                        <div>
+                                            <img src="https://i.postimg.cc/pVqMV8wk/email-filter-image.jpg"
+                                                alt="close-up image of air filter" width="127">
+                                        </div>
+                                    </div>
+                                    <!--[if mso]>
+                                    </td>
+                                    </tr>
+                                    </table>
+                                    <![endif]-->
+                                </div>
+                                <!-- End Product Details -->
+                                <!-- Start Support -->
+                                <tr>
+                                    <td style="background-color: #ffffff;padding: 0px 35px 35px 35px;">
+                                        <table class="section-container" role="presentation" width="100%" cellpadding="0"
+                                            cellspacing="0" border="0" border-spacing="0" style="max-width: 600px;">
+                                            <tr>
+                                                <td style="background-color: #f4f4f4;padding: 20px;text-align: left;">
+                                                    <p
+                                                    style="margin:0;font-size: 14px;font-weight: 500;color: #767676;font-family: 'Rising Sun', sans-serif;line-height: 1.6;">
+                                                    If you are moving soon, need to delay your next shipment, or
+                                                    have any other questions, visit your <a href="https://my.secondnature.com/account/"
+                                                        target="_blank" style="color: #fc5c32;">account</a> or
+                                                    stop by our <a href="https://help.secondnature.com/hc/en-us" target="_blank"
+                                                        style="color: #fc5c32;">Help Center</a>. You can also
+                                                    reach us by phone Monday through Friday at <a
+                                                        href="tel:8003081186"
+                                                        style="color: #fc5c32;">800.308.1186</a>.
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!-- End Support -->
+                                <!-- Start Refer -->
+                                <tr>
+                                    <td style="background-color: #004284;padding: 35px 0px;text-align: center;">
+                                        <table class="section-container" role="presentation" width="100%" cellpadding="0"
+                                            cellspacing="0" border="0" border-spacing="0">
+                                            <tr>
+                                                <td style="text-align: center;">
+                                                    <h3
+                                                        style="margin:0;font-size: 27px;font-weight: 500;color: #ffffff;font-family: 'Rising Sun', sans-serif;line-height: 1.4;">
+                                                        Refer & Earn</h3>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: center;">
+                                                    <p
+                                                        style="margin:40px;font-size: 19px;font-weight: 500;color: #ffffff;font-family: 'Rising Sun', sans-serif;line-height: 1.4;">
+                                                        Share us with others and they'll receive FREE air filters!
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: center;">
+                                                        <!--[if mso]>
+                                                            <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.secondnature.com/refer"" style="height:54px;v-text-anchor:middle;width:242px;" arcsize="10%" strokecolor="#fc7431" fillcolor="#fc7431">
+                                                            <w:anchorlock/>
+                                                            <center style="color:#ffffff;font-family: 'Rising Sun', sans-serif;font-size:17px;font-weight:600;">REFER MY FRIENDS</center>
+                                                            </v:roundrect>
+                                                        <![endif]-->                                                     
+                                                        <a a href="https://www.secondnature.com/refer" target="_blank"
+                                                        style="background-color:#fc7431;border:2px solid #fc7431;border-radius:5px;color:#ffffff;display:inline-block;font-family: 'Rising Sun', sans-serif;font-size:17px;font-weight:600;line-height:54px;text-align:center;text-decoration:none;width:242px;-webkit-text-size-adjust:none;mso-hide:all;">
+                                                        REFER MY FRIENDS
+                                                        </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: center;">
+                                                    <p
+                                                        style="margin:40px;font-size: 18px;font-weight: 500;color: #ffffff;font-family: 'Rising Sun', sans-serif;line-height: 1.4;margin-bottom: 0;">
+                                                        Get a $10 Credit!</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!-- End Refer -->
+                                <!-- Start Contact -->
+                                <tr>
+                                    <td style="background-color: #003A70;padding: 35px 35px 5px 35px;text-align: center;">
+                                        <table class="section-container" role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" border-spacing="0" style="max-width: 600px;">
+                                            <tr>
+                                                <td style="padding-bottom: 30px;text-align: center;">
+                                                    <h3 style="Margin:0;font-size: 27px;font-weight: 500;color: #ffffff;font-family: 'Rising Sun', sans-serif;line-height: 1.4;">
+                                                        Need Help or Have Questions?
+                                                    </h3>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <!--[if mso]>
+                                                            <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" border-spacing="0">
+                                                            <tr>
+                                                            <td width="600" valign="middle" style="padding-bottom: 20px;text-align:center;">
+                                                            <![endif]-->
+                                                    <table class="three-column-container" role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" border-spacing="0">
+                                                        <tr>
+                                                            <td style="font-size: 0;padding-bottom: 20px;text-align: center;">
+                                                                <!-- start-Left-Column -->
+                                                                <!--[if mso]>
+                                                                    </td>
+                                                                    <td style="width:175px;" valign="top">
+                                                                    <![endif]-->
+                                                                <table class="contact-table" role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" border-spacing="0" style="display: inline-block;max-width: 175px;">
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div class="contact-div" style="width: 175px;max-width:175px;padding-bottom: 20px;">
+                                                                            <!--[if mso]>
+                                                                                </td>
+                                                                                <td style="display: inline-block;">
+                                                                            <![endif]-->
+                                                                                <div style="display: inline-block;">
+                                                                                    <img src="https://i.postimg.cc/T1Y8qYDr/email-phone-icon.png"
+                                                                                    alt="phone icon" width="21">
+                                                                                </div>
+                                                                                <!--[if mso]>
+                                                                                    </td>
+                                                                                    <td style="display: inline-block;">
+                                                                                <![endif]-->
+                                                                                <div style="display: inline-block;vertical-align: top;padding-left: 10px;">
+                                                                                    <a href="tel:8003081186" style="font-size: 14px;font-weight: 500;color: #ffffff;font-family: 'Rising Sun', sans-serif;display:inline-block;text-decoration: none;">
+                                                                                        800-308-1186
+                                                                                    </a>
+                                                                                </div>
+                                                                        </td>                                                   
+                                                                    </tr>
+                                                                </table>
+                                                                <!-- End-Left-Column -->
+                                                                <!-- Start-Middle-Column -->
+                                                                <!--[if mso]>
+                                                                    </td>
+                                                                    <td style="width:175px;" valign="top">
+                                                                    <![endif]-->                                                                
+                                                                <table class="contact-table" role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" border-spacing="0" style="display: inline-block;max-width: 175px;">
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div class="contact-div" style="width: 175px;max-width:175px;padding-bottom: 20px;">
+                                                                                <!--[if mso]>
+                                                                                    </td>
+                                                                                    <td style="display: inline-block;">
+                                                                                <![endif]-->
+                                                                                <div style="display: inline-block;">
+                                                                                    <img src="https://i.postimg.cc/q7ydpFrC/email-mail-icon.png"
+                                                                                         alt="email icon" width="21">
+                                                                                </div>
+                                                                                <!--[if mso]>
+                                                                                    </td>
+                                                                                    <td style="display: inline-block;margin-left: 10px;">
+                                                                                <![endif]-->
+                                                                                <div style="display: inline-block;vertical-align: top;padding-left: 10px;">
+                                                                                    <a href="mailto:hello@secondnature.com" style="font-size: 14px;font-weight: 500;color: #ffffff;font-family: 'Rising Sun', sans-serif;display:inline-block;text-decoration: none;">
+                                                                                        Send Us A Message
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div> 
+                                                                        </td>                                                   
+                                                                    </tr>
+                                                                </table>
+                                                                <!-- End-Middle-Column -->
+                                                                <!-- Start-Right-Column -->
+                                                                <!--[if mso]>
+                                                                    </td>
+                                                                    <td style="width:175px;" valign="top">
+                                                                    <![endif]-->
+                                                                <table class="contact-table" role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" border-spacing="0" style="display: inline-block;max-width: 175px;">
+                                                                    <tr>
+                                                                        <td>
+                                                                            <!--[if mso]>
+                                                                                </td>
+                                                                                <td style="padding-left: 20px;">
+                                                                            <![endif]-->
+                                                                            <div class="contact-div" style="width: 175px;max-width:175px;padding-bottom: 20px;">
+                                                                                <!--[if mso]>
+                                                                                    </td>
+                                                                                    <td style="display: inline-block;">
+                                                                                <![endif]-->
+                                                                                <div style="display: inline-block;padding-right: 5px;">
+                                                                                    <img src="https://i.postimg.cc/0yLsRsTs/email-info-icon.png"
+                                                                                    alt="help icon" width="21">
+                                                                                </div>
+                                                                                <!--[if mso]>
+                                                                                    </td>
+                                                                                    <td style="display: inline-block;">
+                                                                                <![endif]-->
+                                                                                <div style="display: inline-block;vertical-align: top;padding-left: 10px;">
+                                                                                    <a href="https://help.secondnature.com/hc/en-us" target="_blank" style="font-size: 14px;font-weight: 500;color: #ffffff;font-family: 'Rising Sun', sans-serif;display:inline-block;text-decoration: none;">
+                                                                                        Help Center
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div> 
+                                                                        </td>                                                   
+                                                                    </tr>
+                                                                </table>
+                                                                <!-- End-Right-Column -->                                                                
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <!--[if mso]>
+                                                        </td>
+                                                        </tr>
+                                                        </table>
+                                                        <![endif]-->
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!-- End Contact -->
+                                <!-- Start Footer -->
+                                <tr>
+                                    <td style="background-color: #f7f7f7;padding: 15px 15px 100px 15px;text-align: center;">
+                                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" border-spacing="0">
+                                            <!--[if mso]>
+                                                <tr>
+                                                <td style="padding-top:30px">
+                                                <![endif]-->
+                                            <tr>
+                                                <td style="font-weight: 500;color: #878787;line-height: 1.6;font-family: 'Rising Sun', sans-serif;text-align: center;">
+                                                    <p style="font-size: 14px;margin-bottom: 0;">FilterEasy, Inc.</p>
+                                                    <p style="font-size: 14px;Margin:0;">333 Fayetteville St. Suite 600</p>
+                                                    <p style="font-size: 14px;Margin:0;">Raleigh, NC 27601</p>
+                                                </td>
+                                            </tr>
+                                             <!--[if mso]>
+                                                </td>
+                                                </tr>
+                                                <![endif]-->
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!-- End Footer -->
+                </td>
+            </tr>
+        </table>
+        </td>
+        </tr>
+    <!-- End Inner Container -->
+    </div>
+    <!-- End Main Div -->
+    <!--[if mso]>
+                    </td>
+                    </tr>
+                    </table>
+                    <![endif]-->
+    <!-- End Main Ghost Table-->
+    </td>
+    </tr>
+    </table>
+    <!-- End Main Table -->
+    </div>
+    <!-- End Wrapper Div -->
 </body>
-
 </html>
+
