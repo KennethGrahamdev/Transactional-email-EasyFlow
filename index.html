@@ -38,15 +38,25 @@
             border: 0;
         }
 
+        /* Removes blue and underline defaults in IOS */
+        a[x-apple-data-detectors] {
+        color:inherit !important;
+        text-decoration:none !important;
+        font-size:inherit !important;
+        font-family:inherit !important;
+        font-weight:inherit !important;
+        line-height:inherit !important;
+        }
+
          /* Removes Samsung blue links */
          #MessageViewBody a {
-    		color: inherit;
-    		text-decoration: none;
-    		font-size: inherit;
-    		font-family: inherit;
-    		font-weight: inherit;
-    		line-height: inherit;
-				}
+    	color: inherit;
+    	text-decoration: none;
+    	font-size: inherit;
+    	font-family: inherit;
+    	font-weight: inherit;
+    	line-height: inherit;
+		}
         
         @media screen and (max-width: 599.98px) { 
             .logo-col,.social-col {
