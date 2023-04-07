@@ -99,6 +99,24 @@
     <style type="text/css">
       @media (prefers-color-scheme: dark ) {
         /* Shows Dark Mode-Only Content, Like Images */
+        .dark-bg {
+          background-color: #1d1f20!important;
+        }
+        .main-content, .refer-dark-bg {
+          background-color: #181a1b!important;
+        }
+        h1, h2, p {
+          color: #ffffff!important;
+        }
+        .content-ship {
+            border: 2px solid #34393b!important;
+        }
+        .order-head {
+            color: #2D799C!important;
+        }
+        .refer-dark-inner {
+            background-color: #1e2122!important;
+        }
         .dark-img { 
           display:block !important;}
         /* Hides Light Mode-Only Content, Like Images */
@@ -135,7 +153,7 @@
     <div role="article" aria-roledescription="email" lang="en"
         style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;background-color:#f7f7f7;">
         <!-- Start Main Table...helps center the body -->
-        <table role="presentation" align="center" width="100%" cellpadding="0" cellspacing="0" border="0" border-spacing="0" style="background-color:#f7f7f7;">
+        <table class="dark-bg" role="presentation" align="center" width="100%" cellpadding="0" cellspacing="0" border="0" border-spacing="0" style="background-color:#f7f7f7;">
             <tr>
                 <td align="center">
                     <!-- Start Main Ghost Table-->
@@ -297,7 +315,7 @@
                                         style="width:100%;display:inline-block;max-width:226px;">
                                         <div class="content-ship" style="padding: 15px;display:inline-block;vertical-align:top;border: 2px solid #f0f0f0;">
                                             <p
-                                                style="margin:0;font-size: 16px;font-weight: bold;color: #2D799C;font-family: 'Rising Sun', sans-serif;line-height: 1.5;">
+                                                class="order-head" style="margin:0;font-size: 16px;font-weight: bold;color: #2D799C;font-family: 'Rising Sun', sans-serif;line-height: 1.5;">
                                                 Shipping Address</p>
                                             <p
                                                 class="ship-text" style="margin:0;font-size: 16px;font-weight: 500;color: #030408;font-family: 'Rising Sun', sans-serif;line-height: 1.5;">
@@ -323,7 +341,7 @@
                                         style="width:100%;display:inline-block;max-width:226px;">
                                         <div class="content-ship" style="padding: 15px;display:inline-block;vertical-align:top;border: 2px solid #f0f0f0;">
                                             <p
-                                                style="margin:0;font-size: 16px;font-weight: bold;color: #2D799C;font-family: 'Rising Sun', sans-serif;line-height: 1.5;">
+                                                class="order-head" style="margin:0;font-size: 16px;font-weight: bold;color: #2D799C;font-family: 'Rising Sun', sans-serif;line-height: 1.5;">
                                                 Payment Method</p>
                                             <p
                                                 style="margin:0;font-size: 16px;font-weight: 500;color: #919599;font-family: 'Rising Sun', sans-serif;line-height: 1.5;">
@@ -412,11 +430,11 @@
                                 <!-- End Product Details -->
                                 <!-- Start Support -->
                                 <tr>
-                                    <td style="background-color: #ffffff;padding: 0px 35px 35px 35px;">
+                                    <td class="refer-dark-bg" style="background-color: #ffffff;padding: 0px 35px 35px 35px;">
                                         <table class="section-container" role="presentation" width="100%" cellpadding="0"
                                             cellspacing="0" border="0" border-spacing="0" style="max-width: 600px;">
                                             <tr>
-                                                <td style="background-color: #f4f4f4;padding: 20px;text-align: left;">
+                                                <td class="refer-dark-inner" style="background-color: #f4f4f4;padding: 20px;text-align: left;">
                                                     <p
                                                     style="margin:0;font-size: 14px;font-weight: 500;color: #767676;font-family: 'Rising Sun', sans-serif;line-height: 1.6;">
                                                     If you are moving soon, need to delay your next shipment, or
@@ -608,7 +626,7 @@
                                 <!-- End Contact -->
                                 <!-- Start Footer -->
                                 <tr>
-                                    <td style="background-color: #f7f7f7;padding: 16px 16px 100px 16px;text-align: center;">
+                                    <td class="dark-bg" style="background-color: #f7f7f7;padding: 16px 16px 100px 16px;text-align: center;">
                                         <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" border-spacing="0">
                                             <!--[if mso]>
                                                 <tr>
