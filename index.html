@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="x-apple-disable-message-reformatting">
     <meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no">
-    <meta name=”color-scheme” content=”light dark”>
-    <meta name=”supported-color-schemes” content=”light dark”>
+    <meta name="color-scheme" content="light dark">
+    <meta name="supported-color-schemes" content="light dark">
     <!--[if !mso]><!-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!--<![endif]-->
@@ -97,8 +97,14 @@
 		}   
     </style>
     <style type="text/css">
+    /* Shows Dark Mode-Only Content*/
+    /* For newer versions of Apple Mail */
+       :root {
+	       color-scheme: light dark;
+	       supported-color-schemes: light dark;
+           }
+    /* For newer versions of Apple Mail */
       @media (prefers-color-scheme: dark ) {
-        /* Shows Dark Mode-Only Content, Like Images */
         .dark-bg {
           background-color: #1d1f20!important;
         }
@@ -117,17 +123,10 @@
         .refer-dark-inner {
             background-color: #1e2122!important;
         }
-        .dark-img { 
-          display:block !important;}
-        /* Hides Light Mode-Only Content, Like Images */
-        .light-img { 
-          display:none !important; }
-        }
-        /* For new versions of Apple Mail */
-        :root {
-	        color-scheme: light;
-	        supported-color-schemes: light;
-        }
+      }
+      [data-ogsc] .btn {
+          color:#fff!important;
+      }
     </style>
     <!--[if mso]>
 		<style type="text/css">
@@ -480,7 +479,7 @@
                                                             <center style="color:#ffffff;font-family: 'Rising Sun', sans-serif;font-size:17px;font-weight:600;">REFER MY FRIENDS</center>
                                                             </v:roundrect>
                                                         <![endif]-->                                                     
-                                                        <a a href="https://www.secondnature.com/refer" target="_blank"
+                                                        <a class="btn" href="https://www.secondnature.com/refer" target="_blank"
                                                         style="background-color:#fc7431;border:2px solid #fc7431;border-radius:5px;color:#ffffff;display:inline-block;font-family: 'Rising Sun', sans-serif;font-size:17px;font-weight:600;line-height:54px;text-align:center;text-decoration:none;width:242px;-webkit-text-size-adjust:none;mso-hide:all;">
                                                         REFER MY FRIENDS
                                                         </a>
